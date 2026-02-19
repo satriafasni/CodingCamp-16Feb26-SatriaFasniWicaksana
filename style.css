@@ -5,3 +5,43 @@ body {
         justify-content: center;
         padding: 40px 20px;
 }
+
+.card{
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 25%;
+    border-radius: 25%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    /* ukuran list menyesuaikan isi konten */
+    height: auto;
+}
+
+h1{
+    text-align: center; color: #8FC0A9;
+}
+
+.input-Section, .filter-Section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    padding: 12px;
+    border-radius: 8px;
+    /* border list untuk form */
+    border: 1px solid #ddd 
+    outline: none;
+
+}
+
+#addBtn {
+    background-color: #4A7C59;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+
+}
