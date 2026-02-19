@@ -32,7 +32,7 @@ input, select, button {
     padding: 12px;
     border-radius: 8px;
     /* border list untuk form */
-    border: 1px solid #ddd 
+    border: 1px solid #ddd;
     outline: none;
 
 }
