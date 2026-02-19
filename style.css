@@ -1,13 +1,13 @@
 body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #FAF3DD;
+        background-color: white;
         display: flex;
         justify-content: center;
         padding: 40px 20px;
 }
 
 .card{
-    background: white;
+    background: #FAF3DD;
     width: 100%;
     max-width: 500px;
     padding: 25%;
@@ -18,7 +18,7 @@ body {
 }
 
 h1{
-    text-align: center; color: #8FC0A9;
+    text-align: center; color: #68B0AB;
 }
 
 .input-Section, .filter-Section {
@@ -43,5 +43,37 @@ input, select, button {
     border: none;
     cursor: pointer;
     font-weight: bold;
+}
 
+#addBtn:hover {background-color: #8FC0A9;}
+
+/*Settingan warna list harus diubah*/
+ul { list-style: none; padding: 0;}
+.todo-item {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.todo-info b {display: block; color: #222; }
+.todo-info span {font-size: 0.85rem; color: #666; }
+
+.delete-btn {
+    background: #ff4757;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    form { opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
 }

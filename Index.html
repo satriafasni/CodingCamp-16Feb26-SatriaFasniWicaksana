@@ -7,30 +7,34 @@
     <title>To Do List</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<div class="card">
-    <h1>Daftar Tugas</h1>
-    <!-- form input -->
-    <div class="input-Section">
-        <input type="text" id="taskInput" placeholder="Masukan Tugas disini !">
-        <input type="date" id="dateInput">
-        <button id="addBtn" onclick="addTask()">Add</button>
-    </div>
-    <!-- Fitur Filter -->
-    <div class="filter-Section">
-        <label for="sortSelect">Urutkan tugas berdasarkan: </label>
-        <select name="" id="sortSelect" onchange="renderTodos()">
-            <option value="inputTerbaru">Waktu Input (terbaru)</option>
-            <option value="inputTerlama">Waktu Input (terlama)</option>
-            <option value="deadlineDekat">Mendekati Deadline</option>
-            <option value="deadlineJauh">Jauh dari Deadline</option>
-        </select>
-    </div>
-
-    <!-- Display List Tugas -->
-    <ul id="todoList"></ul>
-</div>
 
 <body>
+
+    <div class="card">
+        <h1>Daftar Tugas</h1>
+
+        <!-- form input -->
+        <div class="input-Section">
+            <input type="text" id="taskInput" placeholder="Masukan Tugas disini !">
+            <input type="date" id="dateInput">
+            <button id="addBtn" onclick="addTask()">Add</button>
+        </div>
+
+        <!-- Fitur Filter -->
+        <div class="filter-Section">
+            <label for="sortSelect">Urutkan tugas berdasarkan: </label>
+            <select name="" id="sortSelect" onchange="renderTodos()">
+                <option value="inputTerbaru">Waktu Input (terbaru)</option>
+                <option value="inputTerlama">Waktu Input (terlama)</option>
+                <option value="deadlineDekat">Mendekati Deadline</option>
+                <option value="deadlineJauh">Jauh dari Deadline</option>
+            </select>
+        </div>
+
+        <!-- Display List Tugas -->
+        <ul id="todoList"></ul>
+    </div>
+    <script src="script.js"></script>
 
 </body>
 
