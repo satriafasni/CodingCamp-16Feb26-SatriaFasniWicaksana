@@ -2,7 +2,7 @@ let todos =[];
 
 function addTask() {
     const taskInput = document.getElementById('taskInput');
-    const dateInput = document.getElementById('dateInput')
+    const dateInput = document.getElementById('dateInput');
 
     if(taskInput.value === '' || dateInput.value === '') {
        alert("Mohon isi tugas beserta tanggalnya!");
