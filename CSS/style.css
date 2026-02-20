@@ -7,3 +7,13 @@
 .animate-fadeIn {
   animation: fadeIn 0.5s ease;
 }
+/* Warna option saat dropdown dibuka */
+select option {
+  color: #fff; /* merah */
+  background-color: #32373B; /* warna background */
+}
+
+select option:hover {
+  background-color: #fff;
+  color: white;
+}

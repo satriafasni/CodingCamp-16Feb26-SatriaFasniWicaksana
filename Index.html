@@ -11,9 +11,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="font-sans bg-[#32373B] min-h-screen flex flex-wrap justify-center items-center p-10">
+<body class="font-sans bg-[#F4B860] min-h-screen flex flex-wrap justify-center items-center p-10">
 
-    <div class="bg-[#F4B860] w-full max-w-md p-8 rounded-3xl shadow-lg">
+    <div class="bg-[#32373B] w-full max-w-md p-8 rounded-3xl shadow-lg">
         <header>
             <h1 class="text-center text-[#C83E4D] text-2xl mb-4 font-bold">To Do List</h1>
         </header>
@@ -22,31 +22,36 @@
             <!-- form input -->
             <section class="flex flex-col gap-2 mb-5">
                 <input type="text" id="taskInput" placeholder="Masukan Tugas disini !"
-                    class="px-3 py-2 rounded border border-gray-300 outline-none">
-                <input type="date" id="dateInput" class="px-3 py-2 rounded border border-gray-300 outline-none">
+                    class="text-[#F4D6CC] placeholder:text-[#F4D6CC] placeholder:opacity-70  px-3 py-2 rounded border border-[#F4D6CC] outline-none">
+                <input type="date" id="dateInput"
+                    class="text-[#F4D6CC] placeholder:opacity-70 px-3 py-2 rounded border border-[#F4D6CC] outline-none">
                 <button id="addBtn" onclick="addTask()"
                     class="px-4 py-2 bg-[#C83E4D] text-white font-bold rounded hover:bg-[#4A5859]">
                     Add
                 </button>
             </section>
 
+            <header>
+                <h1 class="text-[#F4D6CC] text-2xl font-semibold">List of Todos</h1>
+            </header>
+
             <!-- Fitur Filter -->
             <section class="flex flex-col gap-2 mb-5">
-                <label for="sortSelect" class="text-sm">Urutkan tugas berdasarkan:</label>
+                <label for="sortSelect" class="text-[#F4D6CC] text-sm">Urutkan tugas berdasarkan:</label>
                 <select name="" id="sortSelect" onchange="renderTodos()"
-                    class="px-3 py-2 rounded border border-gray-300 outline-none">
-                    <option value="inputTerbaru">Waktu Input (Newest)</option>
-                    <option value="inputTerlama">Waktu Input (Oldest)</option>
-                    <option value="deadlineDekat">Mendekati Deadline</option>
-                    <option value="deadlineJauh">Jauh dari Deadline</option>
+                    class="px-3 py-2 rounded border border-[#F4D6CC] outline-none text-[#F4D6CC]">
+                    <option value="inputTerbaru" style="color: #C83E4D;">Waktu Input (Newest)</option>
+                    <option value="inputTerlama" style="color: #C83E4D;">Waktu Input (Oldest)</option>
+                    <option value="deadlineDekat" style="color: #C83E4D;">Mendekati Deadline</option>
+                    <option value="deadlineJauh" style="color: #C83E4D;">Jauh dari Deadline</option>
                 </select>
             </section>
             <section>
-                <header>
-                    <h1 class="text-2xl font-semibold">List of Todos</h1>
-                </header>
+                <!-- <header>
+                    <h1 class="text-[#F4D6CC] text-2xl font-semibold">List of Todos</h1>
+                </header> -->
                 <!-- Display List Tugas -->
-                <ul id="todoList" class="bg-[#C490D1] list-none p-0 "></ul>
+                <ul id="todoList" class="bg-[#32373B] list-none p-0 "></ul>
             </section>
         </main>
     </div>

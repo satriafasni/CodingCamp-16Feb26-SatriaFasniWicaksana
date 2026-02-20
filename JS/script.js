@@ -74,10 +74,10 @@ function renderTodos() {
         li.className = 'bg-[#C83E4D] border border-gray-200 p-4 mb-2 rounded flex justify-between items-center animate-fadeIn';
         li.innerHTML = `
         <div class="flex flex-col">
-          <b class="block text-gray-800">${todo.text}</b>
-          <span class="text-sm text-gray-600">Deadline: ${dateString}</span>
+          <b class="block text-[#F4D6CC]">${todo.text}</b>
+          <span class="text-sm text-[#F4D6CC]">Deadline: ${dateString}</span>
         </div>
-        <button class="bg-[#F4D6CC] text-[#32373B] px-2 py-1 rounded hover:bg-[#4A5859]" onclick="deleteTodo(${todo.id})">Hapus</button>
+        <button class="bg-[#4A5859] text-white px-2 py-1 rounded hover:bg-[#F4D6CC]" onclick="deleteTodo(${todo.id})">Hapus</button>
         `;
         listElement.appendChild(li);
     });
