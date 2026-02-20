@@ -5,37 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
+    <!-- CSS External -->
     <link rel="stylesheet" href="CSS\style.css">
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
+<body class="font-sans bg-[#32373B] min-h-screen flex flex-wrap justify-center items-center p-10">
 
-    <div class="card">
+    <div class="bg-[#F4B860] w-full max-w-md p-8 rounded-3xl shadow-lg">
         <header>
-            <h1>Daftar Tugas</h1>
+            <h1 class="text-center text-[#C83E4D] text-2xl mb-4 font-bold">To Do List</h1>
         </header>
 
-        <!-- form input -->
-        <div class="input-Section">
-            <input type="text" id="taskInput" placeholder="Masukan Tugas disini !">
-            <input type="date" id="dateInput">
-            <button id="addBtn" onclick="addTask()">Add</button>
-        </div>
+        <main>
+            <!-- form input -->
+            <section class="flex flex-col gap-2 mb-5">
+                <input type="text" id="taskInput" placeholder="Masukan Tugas disini !"
+                    class="px-3 py-2 rounded border border-gray-300 outline-none">
+                <input type="date" id="dateInput" class="px-3 py-2 rounded border border-gray-300 outline-none">
+                <button id="addBtn" onclick="addTask()"
+                    class="px-4 py-2 bg-[#C83E4D] text-white font-bold rounded hover:bg-[#4A5859]">
+                    Add
+                </button>
+            </section>
 
-        <!-- Fitur Filter -->
-        <div class="filter-Section">
-            <label for="sortSelect">Urutkan tugas berdasarkan: </label>
-            <select name="" id="sortSelect" onchange="renderTodos()">
-                <option value="inputTerbaru">Waktu Input (terbaru)</option>
-                <option value="inputTerlama">Waktu Input (terlama)</option>
-                <option value="deadlineDekat">Mendekati Deadline</option>
-                <option value="deadlineJauh">Jauh dari Deadline</option>
-            </select>
-        </div>
-
-        <!-- Display List Tugas -->
-        <ul id="todoList"></ul>
+            <!-- Fitur Filter -->
+            <section class="flex flex-col gap-2 mb-5">
+                <label for="sortSelect" class="text-sm">Urutkan tugas berdasarkan:</label>
+                <select name="" id="sortSelect" onchange="renderTodos()"
+                    class="px-3 py-2 rounded border border-gray-300 outline-none">
+                    <option value="inputTerbaru">Waktu Input (Newest)</option>
+                    <option value="inputTerlama">Waktu Input (Oldest)</option>
+                    <option value="deadlineDekat">Mendekati Deadline</option>
+                    <option value="deadlineJauh">Jauh dari Deadline</option>
+                </select>
+            </section>
+            <section>
+                <header>
+                    <h1 class="text-2xl font-semibold">List of Todos</h1>
+                </header>
+                <!-- Display List Tugas -->
+                <ul id="todoList" class="bg-[#C490D1] list-none p-0 "></ul>
+            </section>
+        </main>
     </div>
+
+    <footer>
+
+    </footer>
+
+    <!-- JS External -->
     <script src="JS\script.js"></script>
 
 </body>

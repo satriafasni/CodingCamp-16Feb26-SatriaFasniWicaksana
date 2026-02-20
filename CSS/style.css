@@ -1,80 +1,9 @@
-body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: white;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        padding: 40px 20px;
-}
-
-.card{
-    background: #FAF3DD;
-    width: 100%;
-    max-width: 500px;
-    padding: 25%;
-    border-radius: 25%;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    /* ukuran list menyesuaikan isi konten */
-    height: auto;
-}
-
-h1{
-    text-align: center; color: #68B0AB;
-}
-
-.input-Section, .filter-Section {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-input, select, button {
-    padding: 12px;
-    border-radius: 8px;
-    /* border list untuk form */
-    border: 1px solid #ddd;
-    outline: none;
-
-}
-
-#addBtn {
-    background-color: #4A7C59;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-#addBtn:hover {background-color: #8FC0A9;}
-
-/*Settingan warna list harus diubah*/
-ul { list-style: none; padding: 0;}
-.todo-item {
-    background: #fff;
-    border: 1px solid #eee;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    animation: fadeIn 0.5s ease;
-}
-
-.todo-info b {display: block; color: #222; }
-.todo-info span {font-size: 0.85rem; color: #666; }
-
-.delete-btn {
-    background: #ff4757;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
+/* minimal custom styles for animation */
 @keyframes fadeIn {
-    form { opacity: 0; transform: translateY(10px);}
-    to {opacity: 1; transform: translateY(0);}
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease;
 }
